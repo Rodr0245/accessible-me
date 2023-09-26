@@ -1,29 +1,40 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
-
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
 }
-
+h1 {
+  font-weight: lighter;
+  font-size: 2.5rem;
+}
+.studio-info {
+  display: flex;
+  justify-content: space-between;
+}
+p, .studio-info li {
+  font-weight: lighter;
+  font-size: 1.4rem;
+}
+.studio-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
 .container {
-  max-width: 1080px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 img {
   width: 100%;
 }
-
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -31,41 +42,87 @@ img {
   margin: 0;
   padding: 0;
 }
-
-.main-nav ul li {
-  flex: 1;
-  text-align: center;
-}
-
 .main-nav ul li a {
-  display: block;
-  color: inherit;
+  color: rgb(114, 114, 114);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  padding: 0 2rem;
+  margin-left: 1rem;
+  transition: color .3s;
 }
-
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+.main-nav ul li a:hover {
+  color: black;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+}
 form input,
 form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding: .5rem 0;
 }
-
 form textarea {
   min-height: 150px;
   max-height: 150px;
   height: 150px;
   resize: none;
 }
-
 form button {
   background: none;
-  border: 2px solid black;
+  border: 1px solid rgb(114, 114, 114);
   padding: 1rem;
   text-transform: uppercase;
 }
-
 .site-footer {
-  padding: 2rem 0;
+  padding: 5rem 0 1rem;
+}
+.site-header h1 {
+  color: black;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.jambox-text {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.banner {
+  width: 100%;
+}
+.focused {
+  color: black !important;
+}
+.owner-info img { 
+  width: 20%;
+}
+.contact-section {
+  order: -1;
+}
+
+
+@media screen and (min-width: 760px) {
+  .infoncontact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5rem;
+  }
+  .studio-info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    justify-content: center;
+  }
 }
